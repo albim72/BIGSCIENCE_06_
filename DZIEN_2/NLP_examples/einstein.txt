@@ -1,0 +1,11 @@
+context = (
+    "Albert Einstein was a German theoretical physicist who developed the theory of relativity, "
+    "one of the two main theories of modern physics. He was born in 1879 in Ulm, in the Kingdom of Württemberg."
+)
+
+
+questions = [
+    "Who was Albert Einstein?",
+    "Where was Albert Einstein born?",
+    "When was Albert Einstein born?"
+]
