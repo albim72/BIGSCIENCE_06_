@@ -9,3 +9,16 @@ questions = [
     "Where was Albert Einstein born?",
     "When was Albert Einstein born?"
 ]
+
+
+Albert Einstein was born on March 14, 1879, in Ulm, in the Kingdom of Württemberg, Germany. He showed an early interest in mathematics and physics, excelling in these subjects at school. In 1905, while working as a patent clerk in Switzerland, he published four groundbreaking scientific papers, a year now known as his "annus mirabilis." One of these introduced the special theory of relativity, revolutionizing the understanding of space and time. In 1915, he presented the general theory of relativity, providing a new description of gravitation. Einstein received the Nobel Prize in Physics in 1921 for his explanation of the photoelectric effect. He emigrated to the United States in 1933 to escape the rise of the Nazi regime. At the Institute for Advanced Study in Princeton, he continued his research in theoretical physics. Einstein was also known for his pacifism and advocacy for civil rights. He died on April 18, 1955, in Princeton, New Jersey, leaving a lasting legacy as one of the most influential scientists in history.
+
+When and where was Albert Einstein born?
+
+What major scientific contribution did Einstein make in 1905?
+
+For which discovery did Einstein receive the Nobel Prize in Physics?
+
+Why did Einstein emigrate to the United States in 1933?
+
+What is Einstein especially remembered for in the field of science?
