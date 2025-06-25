@@ -100,3 +100,42 @@ print(classification_report(y_test, y_pred_bin, digits=4))
 
 print("\nMACIERZ POMYŁEK:")
 print(confusion_matrix(y_test, y_pred_bin))
+
+
+#_________________________________________________________________________________________
+
+def init_population(size):
+    population = []
+    for _ in range(size):
+        layers = random.choices([16, 32, 64, 128], k=random.randint(1, 3))
+        activation = random.choice(['relu', 'tanh'])
+        lr = random.choice([1e-4, 1e-3, 1e-2])
+        epochs = random.randint(5, 20)  # NOWE
+        population.append({'layers': layers, 'activation': activation, 'lr': lr, 'epochs': epochs})
+    return population
+
+
+def mutate(ind):
+    new_ind = ind.copy()
+    if random.random() < 0.5:
+        new_ind['layers'] = random.choices([16, 32, 64, 128], k=random.randint(1, 3))
+    if random.random() < 0.3:
+        new_ind['activation'] = random.choice(['relu', 'tanh'])
+    if random.random() < 0.3:
+        new_ind['lr'] = random.choice([1e-4, 1e-3, 1e-2])
+    if random.random() < 0.4:  # NOWE
+        new_ind['epochs'] = random.randint(5, 20)
+    return new_ind
+
+
+def evaluate(individual):
+    model = build_model(individual, input_dim=X_train.shape[1])
+    model.fit(X_train, y_train, epochs=individual['epochs'], batch_size=32, verbose=0)
+    y_pred = model.predict(X_test).flatten()
+    y_pred = (y_pred > 0.5).astype(int)
+    return accuracy_score(y_test, y_pred)
+
+
+
+final_model.fit(X_train, y_train, epochs=best_model['epochs'], batch_size=32, verbose=0)
+
