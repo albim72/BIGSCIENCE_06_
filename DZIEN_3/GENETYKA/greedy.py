@@ -17,6 +17,7 @@ def greedy(items, capacity):
         if item["weight"] <= capacity:
             result.append(item)
             total_value += item["value"]
+            capacity -= item["weight"]
     return total_value,result
 
 tot_value = greedy(items, capacity)[0]
@@ -26,4 +27,3 @@ res = greedy(items, capacity)[1]
 print(greedy(items, capacity))
 print(f"wybrane przedmioty:{res}")
 print(f"łączna wartość wybranych przedmiotu:{tot_value}")
-
